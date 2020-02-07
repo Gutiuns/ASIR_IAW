@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#f1f1f1 ;
+}
+footer{
+    position:fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+}
+footer p{
+    color: #f1f1f1;
+    text-transform: capitalize;
+}
+header h1{
+    margin-right: 10px;
+    font-size: 3em;
+}
+header h2{
+    font-size: 2.5em;
+}
+header{
+    width: 100%;
+    padding: 20px;
+    background-color: #222;
+    color: #f1f1f1;
+}
+header table{
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+header ul{
+    list-style: none;
+}
+header li{
+    display: inline;
+    margin-right: 15px;
+}
+header a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.4em;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+header h1, header h2{
+    display: inline;
+}
+.der{
+    text-align: right;
+    min-width: 600px;
+}
+.active{
+    font-weight: 700;
+}
+
+section{
+    width: 100%;
+}
+.rodea{
+    position:relative;
+    width: 200px;
+    height: 40px;
+    align-content: center;
+    border:none;
+    background:transparent;
+    box-sizing: border-box;
+}
+.rodea::after{
+    position:absolute;
+    content: "";
+    top:0;
+    left:0;
+    width:0px;
+    height: 40px;
+    border-top:3px solid #f1f1f1;
+    border-left:3px solid #f1f1f1;
+    transition:.4s;
+    box-sizing: border-box;
+}
+.rodea::before{
+    position:absolute;
+    content: "";
+    bottom:0;
+    right:0;
+    width:0px;
+    height: 100%;
+    border-bottom:3px solid #f1f1f1;
+    border-right:3px solid #f1f1f1;
+    transition:.4s;
+    box-sizing: border-box;
+}
+.rodea:hover::before, .rodea:hover::after{
+    width: 100%;
+    transition:.4s;
+    height: 0;
+}
+.rodea:active{
+    background-color: #f1f1f1;
+    color: #222;
+}

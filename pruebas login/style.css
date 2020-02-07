@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background: rgb(24, 24, 24) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+#caja {
+    box-sizing: border-box;
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4d4d4d;
+    margin-top: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#cabeza h1 {
+    font-size: 2.3em;
+    text-decoration: underline;
+    font-stretch: extra-expanded;
+}
+
+#cabeza {
+    background-color: yellow;
+    color: rgb(24, 24, 24);
+    overflow: hidden;
+    padding: 20px;
+}
+
+#cabeza h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.dentro {
+    padding: 20px;
+}
+
+.box {
+    margin: 15px 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: text;
+}
+
+i {
+    margin-left: 10px;
+    color: #4d4d4d;
+}
+
+.datos {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+    overflow: hidden;
+    width: 90%;
+    font-size: 1.2em;
+}
+
+input:focus {
+    overflow: hidden;
+    border: none;
+    outline: 0px;
+}
+
+button {
+    background: yellow;
+    color: rgb(24, 24, 24);
+    border: none;
+    position: relative;
+    height: 50px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 400ms ease all;
+    outline: none;
+    align-content: center;
+    display: block;
+    margin: 40px auto 10px auto;
+}
+
+button:hover {
+    background: #4d4d4d;
+    color: rgb(24, 24, 24);
+    color: #f1f1f1;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: yellow;
+    transition: 100ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: .6s ease all;
+}

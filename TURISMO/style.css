@@ -1,0 +1,504 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family:'Open Sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* cabezera de la web */
+
+#header {
+    width: 100%;
+    background-image: url("resources/back.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position-y: -230px;
+    background-position-x: center;
+    background-attachment: fixed;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 1000px;
+}
+
+#title {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: #f1f1f1;
+    font-size: 3.5em;
+    background: rgba(34, 34, 34, 0.664);
+    padding: 50px;
+}
+
+
+/* fin cabezera de la web */
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* falsas tablas para alinear el contenido en el centro */
+
+#tabla {
+    width: 100%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+}
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    width: 70%;
+    min-width: 1000px;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 15px;
+    align-content: center;
+}
+
+
+/* fin falsas tablas */
+
+
+/* botones del index */
+
+.but {
+    padding: 18px 35px;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 700;
+    border-radius: 40px;
+}
+
+.red {
+    background-color: rgb(194, 0, 0);
+    border-bottom: 3px solid rgb(148, 1, 1);
+}
+
+.blue {
+    background-color: rgb(3, 109, 209);
+    border-bottom: 3px solid rgb(0, 75, 146);
+}
+
+.green {
+    background-color: rgb(78, 194, 0);
+    border-bottom: 3px solid rgb(47, 150, 0);
+}
+
+.orange {
+    background-color: rgb(194, 116, 0);
+    border-bottom: 3px solid rgb(145, 87, 0);
+}
+
+.red:hover {
+    transition: 0.3s;
+    background-color: rgb(148, 1, 1);
+}
+
+.blue:hover {
+    transition: 0.3s;
+    background-color: rgb(0, 75, 146);
+}
+
+.green:hover {
+    transition: 0.3s;
+    background-color: rgb(47, 150, 0);
+}
+
+.orange:hover {
+    transition: 0.3s;
+    background-color: rgb(145, 87, 0);
+}
+
+
+/* fin botones del index */
+
+
+/* tabla muestra ciudades */
+
+th {
+    background-color: rgb(168, 95, 0);
+    padding: 10px;
+    color: #F1F1F1;
+    border-bottom: 2px solid black;
+}
+
+.linea {
+    border-bottom: 1px solid black;
+    background-color: rgb(255, 224, 121);
+}
+
+.linea2 {
+    border-bottom: 1px solid black;
+    background-color: rgb(255, 241, 219);
+}
+
+
+/* fin tabla muestra ciudades */
+
+h2,
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* boton de vovler a inicio */
+
+.volver {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: indigo;
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 10px 25px;
+    z-index: 20;
+    border-radius: 40px;
+}
+
+
+/* animacion del botón para que salga un subrayado progresivo */
+
+.volver::after {
+    content: "";
+    position: absolute;
+    left: 26px;
+    bottom: 10px;
+    width: 0px;
+    height: 20PX;
+    border-bottom: 1PX SOLID #F1F1F1;
+    transition: .3s;
+}
+
+.volver:hover::after {
+    transition: .3s;
+    width: 40px;
+}
+
+
+/* fin animacion del botón para que salga un subrayado progresivo */
+
+
+/* fin boton de vovler a inicio */
+
+.cuad {
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+}
+
+
+/* formularios */
+
+form {
+    border: 2px solid rgb(0, 75, 146);
+    border-radius: 20px;
+    width: 30%;
+    min-width: 400px;
+    padding: 20px;
+    margin: 80px auto;
+    background-color: rgb(111, 177, 238);
+}
+
+label {
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    margin: 20px 5px 10px;
+}
+
+.input {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 2px solid rgb(0, 75, 146);
+    outline: transparent;
+    font-size: 1em;
+    width: 80%;
+}
+
+input[type=number] {
+    width: 20%;
+}
+
+input[type=text]:focus,
+input[type=number]:focus {
+    background-color: rgb(253, 251, 213);
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-left: 40px;
+    margin-right: 20px;
+    width: 16px;
+    height: 16px;
+}
+
+.line {
+    display: block;
+    margin-top: 20px;
+}
+
+.enviar {
+    color: #f1f1f1;
+    border: none;
+    border-radius: 40px;
+    outline: transparent;
+    padding: 12px 32px;
+    margin: 50px 10px 20px;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.enviar:hover {
+    cursor: pointer;
+}
+
+.alert {
+    margin: 30px auto;
+    font-size: 2em;
+    color: rgb(161, 0, 0);
+    font-weight: 700;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 10px;
+    border: 5px solid rgb(161, 0, 0);
+    max-width: 700px;
+}
+
+
+/*colores para cada formulario y botones*/
+
+.rosso {
+    border-color: rgb(204, 15, 15);
+    background-color: rgb(250, 169, 169);
+}
+
+.rojo {
+    background-color: rgb(204, 15, 15);
+    border-color: rgb(168, 9, 9);
+}
+
+.rojo:active {
+    background-color: rgb(168, 9, 9);
+}
+
+.margen-b {
+    margin-bottom: 40px;
+}
+
+.verdo {
+    border-color: rgb(46, 167, 9);
+    background-color: rgb(185, 250, 169);
+}
+
+.verde {
+    background-color: rgb(46, 167, 9);
+}
+
+.verde:active {
+    background-color: rgb(38, 139, 7);
+}
+
+.greeen {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 2px solid rgb(46, 167, 9);
+    outline: transparent;
+    font-size: 1em;
+    display: inline;
+    margin-top: 20px;
+}
+
+.azulo {
+    background-color: rgb(0, 75, 146);
+}
+
+.azulo:active {
+    background-color: #1d3d79;
+}
+
+
+/*foto index*/
+
+.vangog {
+    margin: 60px;
+}
+
+
+/*cuadro de error*/
+
+.error {
+    border-radius: 20px;
+    border: 5px solid rgb(161, 0, 0);
+    width: 1000px;
+    margin: 70px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(212, 212, 212);
+    height: 500px;
+}
+
+
+/*animacion de foto palpitando para pagina de error*/
+
+.imanimada {
+    animation: alerta 200ms infinite;
+    animation-direction: alternate;
+}
+
+@keyframes alerta {
+    0% {
+        width: 180px;
+        height: 145px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    100% {
+        width: 240px;
+        height: 205px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* fin animacion error */
+
+
+/* pie de pagina */
+
+footer {
+    margin-top: 30px;
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.pie {
+    color: #F1F1F1;
+    font-size: small;
+}
+
+
+/* fin pie de pagina */
+
+
+/* barra de navegación personalizada para navegadores webkit */
+
+::-webkit-scrollbar {
+    width: 16px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    box-shadow: inset 2px 2px 5px #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 122, 122);
+    border-radius: 40px;
+    height: 10px;
+    box-shadow: 1px 1px 5px #444;
+}
+
+
+/* fin barra de navegación */
+
+
+/* cuadro de operación completada */
+
+.bien {
+    border-radius: 20px;
+    border: 5px solid rgb(1, 93, 168);
+    width: 1000px;
+    margin: 70px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+}
+
+.imgbien {
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+}
+
+.cool {
+    color: deepskyblue;
+    margin-top: 30px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+/* boton para volver a index cuando se ha completado al insercion */
+
+.home {
+    display: block;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 40px;
+    margin: 40px auto 0 auto;
+    width: 200px;
+}
+
+.colorbien {
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    color: deepskyblue;
+    font-size: 2em;
+    transition: 300ms;
+    box-sizing: border-box;
+    border: 5px solid deepskyblue;
+}
+
+.colorbien:hover {
+    background-color: deepskyblue;
+    color: rgb(255, 255, 255);
+    transition: 300ms;
+}
+
+
+/* boton para volver a index cuando ha habido un error */
+
+.colormal {
+    background-color: #f1f1f1;
+    color: rgb(161, 0, 0);
+    font-size: 2em;
+    transition: 300ms;
+    box-sizing: border-box;
+    border: 5px solid rgb(161, 0, 0);
+}
+
+.colormal:hover {
+    color: #f1f1f1;
+    background-color: rgb(161, 0, 0);
+}

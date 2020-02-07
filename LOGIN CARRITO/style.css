@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Quicksand','Almarai','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+header{
+    width: 100%;
+    box-sizing: border-box;
+}
+.brandDownload{
+    width: 100%;
+    background-image: linear-gradient(to right, #c13584 , #e13063 , #dd2140  );
+}
+header h3{
+    font-weight: 500;
+    display: block;
+}
+header td{
+    padding: 10px;
+    width: 33%;
+}
+
+.headtab{
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+}
+.right{
+    text-align: right;
+}
+header table a{
+    margin-right: 25px;
+    text-decoration: none;
+}
+.hov:hover{
+    cursor: pointer;
+}
+.butGet{
+    color:white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border: 1px solid white;
+    font-weight:300;
+    border-radius: 5px;
+}
+.butGet:hover{
+    background-color: white;
+    color:#dd2140;
+}.cent{
+    text-align: center;
+}
+.colgrey{
+    color: #bbb;
+}
+.login{
+    border:1px solid #ccc;
+    padding: 25px;
+    width: 30%;
+    min-width: 400px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:30px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.centro{
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+}
+.facebook{
+    width: 80%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:15px;
+    background-color: #1DA1F2;
+    color:white;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+h2{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(179, 179, 179);
+
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(179, 179, 179);
+
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(179, 179, 179);
+
+  }
+  .facebook:hover{
+      background-color: rgb(31, 133, 196);
+      transition: .3s;
+  }
+  input[type=text],input[type=password]{
+    display: block;
+    width: 80%;
+    padding: 10px 5px;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 1em;
+    background-color: #f7f7f7;
+    border: 1px solid #aaa;
+    outline: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type=text]:focus,input[type=password]:focus{
+    border: 2px solid #aaa;
+    padding: 9px 4px;
+  }
+  .merg-t{
+      margin-top:5px;
+  }
+  .marg-t{
+    margin-top:25px;
+  }
+  .fp{
+     display: block;
+     width: 100%;
+     margin-left:auto;
+     margin-right: auto;
+     color: #1DA1F2;
+     text-align: center;
+     margin-top: 20px;
+     cursor: pointer;
+  }
+  footer{
+    position: fixed;
+      bottom: 0;
+    padding: 10px;
+    border: 1px solid #bbb;
+    background-color: white;
+  }
+  .fot-p{
+      display: inline;
+  }
+  footer, footer table, footer tr{
+      width: 100%;
+  }
+ footer a{
+    cursor: pointer;
+    font-weight: 500;
+ }
+/*#################*/

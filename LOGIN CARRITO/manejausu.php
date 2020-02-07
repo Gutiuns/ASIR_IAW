@@ -1,0 +1,9 @@
+<?php
+session_start();
+require_once('libs/dat_bd.php');
+require_once('libs/lib_bd.php');
+require_once('libs/maneja_login.php');
+conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
+inserta_usuario($bd,$_POST['user'],$_POST['pass']);
+header('location:index.php');
+?>

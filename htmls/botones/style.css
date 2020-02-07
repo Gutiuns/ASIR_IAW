@@ -1,0 +1,212 @@
+*{
+    margin:auto;
+    padding: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.box{
+    padding:50px;
+    display:inline-block;
+}
+button{
+    cursor: pointer;
+    outline: none;
+}
+.b-gota{
+    padding:10px 40px;
+    background-color: gold;
+    box-sizing: border-box;
+    border:3px solid black;
+    border-radius: 40px 0px 40px 0px;
+    transition: 300ms;
+}
+.b-gota:hover{
+    border-radius: 0px 40px 0px 40px ;
+    transition: 100ms ease all;
+}
+.b-apear{
+    height: 40px;
+    width: 180px;
+    background:transparent;
+    position:relative;
+    border:none;
+}
+.b-apear:hover{
+    color:#f1f1f1;
+    transition: 300ms ease all;
+}
+.b-apear::after{
+    content:"";
+    position:absolute;
+    background-color: #111;
+    width: 0px;
+    height: 0px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -45%);
+    z-index:-1;
+    transition: 300ms ease all;
+}
+.b-apear:hover::after{
+    transition: 300ms ease all;
+    width: 180px;
+    height: 40px;
+}
+.b-apear::before{
+    content:"";
+    width: 0px;
+    height: 40px;
+    background: transparent;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -46%);
+    transition: 300ms ease all;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    opacity: 0;
+}
+.b-apear:hover::before{
+    width: 180px;
+    height: 48px;
+    opacity: 1;
+    transition: 300ms ease all;
+}
+.b-lao{
+    height: 40px;
+    width: 180px;
+    background:transparent;
+    position:relative;
+    border:none;
+}
+.b-lao:hover{
+    transition: 300ms ease all;
+}
+.b-lao::after{
+    content:"";
+    position:absolute;
+    background:transparent;
+    width: 0px;
+    height: 40px;
+    top:0px;
+    right: 0px;
+    z-index:-1;
+    transition: 300ms ease all;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+}
+.b-lao:hover::after{
+    transition: 300ms ease all;
+    width: 180px;
+    height: 40px;
+    right: 0;
+    
+}
+.b-lao::before{
+    content:"";
+    width: 0px;
+    height: 48px;
+    position:absolute;
+    top:-4px;
+    left:0px;
+    transition: 300ms ease all;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+}
+.b-lao:hover::before{
+    width: 180px;
+    height: 48px;
+    left:0;
+    transition: 300ms ease all;
+}
+.rodea{
+    position:relative;
+    width: 200px;
+    height: 40px;
+    align-content: center;
+    border:none;
+    background:transparent;
+    box-sizing: border-box;
+}
+.rodea::after{
+    position:absolute;
+    content: "";
+    top:0;
+    left:0;
+    width:0px;
+    height: 40px;
+    border-top:3px solid black;
+    border-left:3px solid black;
+    transition:.4s;
+    box-sizing: border-box;
+}
+.rodea::before{
+    position:absolute;
+    content: "";
+    bottom:0;
+    right:0;
+    width:0px;
+    height: 40px;
+    border-bottom:3px solid black;
+    border-right:3px solid black;
+    transition:.4s;
+    box-sizing: border-box;
+}
+.rodea:hover::before, .rodea:hover::after{
+    width: 200px;
+    transition:.4s;
+    height: 0;
+}
+.b-multi{
+    width: 220px;
+    height: 40px;
+    border:none;
+    background:transparent ;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #111;
+}
+.b-multi:hover{
+    animation: colores 900ms infinite;
+}
+@keyframes colores{
+    0%{
+        border-bottom-color: rgb(196, 0, 0);
+    }
+    50%{
+        border-bottom-color: rgb(0, 3, 196);
+    }
+    100%{
+        border-bottom-color: rgb(196, 0, 0);
+    }
+}
+.b-wide{
+    width: 220px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    position:relative;
+    transition:.4s;
+}
+.b-wide:hover{
+    color:#f1f1f1;
+    transition:.4s;
+}
+.b-wide::before{
+    position:absolute;
+    top:0;
+    left:50%;
+    content: "";
+    width: 0px;
+    height: 100%;
+    background-color: rgb(25, 34, 117);
+    transition:.4s;
+    z-index: -1;
+}
+.b-wide:hover::before{
+    border-radius:40px;
+    width: 100%;
+    left:0px;
+    transition:.4s;
+}

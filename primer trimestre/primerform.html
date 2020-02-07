@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html lang="es" style="background-color: #ddd">
+<head>
+	<title> formulario guillermo </title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style>
+		h2{
+			text-transform: uppercase;
+		}
+		input[type=text], input[type=email]{
+			display:block;
+			width: 30%;
+			padding: 8px 16px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 2px solid black;
+			transition-duration: 300ms;
+		}
+		input[type=submit], input[type=reset]{
+			border-radius:4px;
+			border:none;
+			background-color:  rgb(253, 143, 0);
+			color:#fff;
+		}
+		input[type=submit]:focus, input[type=reset]:focus{
+			background-color: rgb(179, 101, 0);
+		}
+		input[type=submit]:hover, input[type=reset]:hover, #archivo{
+			cursor:pointer;
+		}
+		input[type=text]:hover,input[type=email]:hover {
+			width: 70%;
+			display:block;
+			transition-duration: 300ms;
+		}
+		input[type=radio],input[type=checkbox]{
+			cursor:pointer;
+		}
+		input[type=text]:focus,input[type=email]:focus {
+			width: 70%;
+		}
+		input[type=number] {
+			padding: 8px 16px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 2px solid black;
+			display:block;
+		}
+		input [type=checkbox]{
+			float:left;
+			margin-right: 30px;
+		}
+		select{
+			padding: 8px 16px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 2px solid black;
+			font-size: 1em;
+			display:block;
+		}
+		fieldset{
+			box-sizing: border-box;
+			border: 2px solid black;
+			border-radius:15px;
+		}
+		input:focus{
+			background-color: rgb(203, 223, 253);
+		}
+		.bot{
+			cursor:pointer;
+		}
+		.inputfile {
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+		#archivo{
+			border-radius:4px;
+			border:none;
+			background-color:  rgb(253, 143, 0);
+			color:#fff;
+			padding:5px;
+			font-weight:bold;
+			font-size:1.5em;
+			text-align:center;
+			font-family:sans-serif;
+		}
+	</style>
+	
+</head>
+
+
+<body>
+	<div style="border:3px solid black; width:40%; padding:20px; margin:auto; background-color: rgb(255, 228, 74); border-radius:15px;">
+		<h2 style="text-align:center;">primer formulario</h2>
+		<form action="manejaform.php" enctype="multipart/form-data" method="POST" target="_blank">
+			<label for="neim" style="padding:15px;" >NOMRE </label> <input size="40" type="text" name="nombre"  id="neim" placeholder="Ej. Pepito "/>
+			<label for="ape" style="padding:15px;" >APELLIDOS </label> <input size="40" type="text"  name="apellidos" id="ape" placeholder="Ej. Palotes "/>
+			<label for="imail" style="padding:15px;" >EMAIL </label><br/> <input size="40" type="email" name="email"  id="imail" placeholder="PepitoPalotes@mail.foo "/>
+			<label for="age" style="margin:15px; ">EDAD </label><br/><input id="age" name="edad" type="number" min="1"  max="100" />
+			<label style="margin:15px;"">ESTADO CIVIL </label>
+			<select name="estado" title="estado civil">
+				<option value="soltero">soltero</option>
+				<option value="casado">casado</option>
+				<option value="viudo">viudo</option>
+				<option value="es complicado">es complicado</option>
+			</select>
+			<fieldset style="padding:15px;">
+				<legend>GENERO</legend>
+					<input type="radio" name="genero" value="hombre" id="hom"/> <label class="bot" for="hom"> Masculino </label>
+					<input type="radio" name="genero" value="mujer" id="mu"/> <label class="bot" for="mu"> Femenino </label>
+			</fieldset>
+			<fieldset style="padding:15px;">
+					<legend>HIJOS</legend>
+					<input type="radio" name="hijos" value="0" id="0"/> <label  class="bot" for="0">0</label>
+					<input type="radio" name="hijos" value="1" id="1"/> <label  class="bot" for="1">1</label>
+					<input type="radio" name="hijos" value="2" id="2"/> <label  class="bot" for="2">2</label>
+					<input type="radio" name="hijos" value="3" id="3"/> <label  class="bot" for="3">3</label>
+			</fieldset>	
+			<fieldset style="padding:15px;">
+				<legend>GUSTOS</legend>
+					<input type="checkbox" name="gustos[]" value="la musica" id="musica"/> <label  class="bot" for="musica">música</label>
+					<input type="checkbox" name="gustos[]" value="la pintura" id="pintura"/> <label  class="bot" for="pintura">pintura</label>
+					<input type="checkbox" name="gustos[]" value="el deporte" id="deporte"/> <label  class="bot" for="deporte">deporte</label>
+					<input type="checkbox" name="gustos[]" value="el baile" id="baile"/> <label  class="bot" for="baile">baile</label>
+					<input type="checkbox" name="gustos[]" value="la cocina" id="cocina"/> <label  class="bot" for="cocina">cocina</label>		
+			</fieldset></br>
+			<input type="file" id="file" class="inputfile"/><label id="archivo" for="file">Sube un archivo</label>
+			<div style="padding:15px;">				
+				<input type="submit" value="submit" style="padding:10 5; font-weight:bold; font-size:1.5em;"/>
+				<input type="reset" value="reset" style="padding:10 5; font-weight:bold; font-size:1.5em; margin:5px;"/> 	
+			</div>
+			
+
+		</form>
+
+	</div>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bodylog{
+    background-image:url('resources/zap2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:transparent;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    background-color: #222;
+}
+.logimg{
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input.log{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulogn{
+    width: 500px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border:5px solid #222;
+    vertical-align: center;
+    margin-bottom: 80px;
+    
+}
+.box {
+    margin: 15px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 10px;
+    border:3px solid #222;
+    margin-bottom: 30px;
+    cursor: text;
+}
+
+i {
+    margin-left: 10px;
+}
+
+.datos {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+    overflow: hidden;
+    width: 90%;
+    font-size: 1.2em;
+}
+
+input:focus {
+    overflow: hidden;
+    border: none;
+    outline: 0px;
+}
+.botonlog{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 5px 20px;
+    background-color: #fff;
+    border: 3px solid #222;
+    color:#222;
+    cursor: pointer;
+    transition: .2s;
+    text-transform: uppercase;
+}
+.botonlog:hover{
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: #222;
+    color: #fff;
+    transition: .2s;
+}
+.botonlog:active{
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: black;
+    border: 3px solid black;
+}
+.botonlog:focus{
+
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: black;
+    border: 3px solid black;
+}
+.nologin{
+    display: block;
+    position: fixed;
+    width: 300px;
+    top:0;
+    left: 50%;
+    transform:translate(-50%,0);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.315);
+}
+.logeate{
+    text-align: center;
+    width: 100%;
+    min-width: 300px;
+    margin-top: 20px;
+}
+.cuenta{
+    color: #222;
+    font-weight: 500;
+    display: inline;
+}
+a.cuenta{
+    font-weight: 800;
+}
+.fa-user, .fa-lock{
+    color: #222;
+}
+.menores{
+    font-size: .7em;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+}
+.inputblock{
+    display: block;
+    border:3px solid #222;
+    padding: 5px;
+    font-size: 1em;
+}
+.inputblock:focus{
+    border:3px solid #222;
+}
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { display:none;}
+input{
+    width: 60%;
+    margin: 5px 0;
+}
+p.pform{
+    font-weight: 600;
+    color: #222;
+    font-size: 1.2em;
+}
+.welcom{
+    font-weight: 800;
+    font-size: 1.5em;
+    color:#222;
+    text-align: center;
+}
+
+.linklog{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px auto 10px auto;
+    padding: 5px 20px;
+    background-color: #fff;
+    border: 3px solid #222;
+    color:#222;
+    cursor: pointer;
+    transition: .2s;
+    text-transform: uppercase;
+    width: 60%;
+}
+.linklog:hover{
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: #222;
+    color: #fff;
+    transition: .2s;
+}
+.linklog:active{
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: black;
+    border: 3px solid black;
+}
+.linklog:focus{
+    padding: 5px 30px;
+    letter-spacing: 15px;
+    background-color: black;
+    border: 3px solid black;
+}
+header{
+    padding: 10px 25px;
+    background-color: #222;
+}
+
+.headimg{
+    display: inline;
+
+}
+.fixlist{
+    list-style: none;
+    float: right;
+    margin-top: 17px;
+}
+.fixit{
+    display: inline-flex;
+}
+.lista{
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin-left: 30px;
+    padding: 5px 15px 5px 2px;
+    border:3px solid #222;
+    transition: .2s
+}
+.lista:hover{
+    border:3px solid #fff;
+    transition: .2s all;
+}
+.lista:active{
+    background-color: black;
+}
+.activo{
+    border:3px solid #fff;
+    background-color: #fff;
+    color:#222;
+    font-weight: 800;
+}
+
+
+/*    LISTA DESPLEGABLE  */
+
+
+.dropdown, .dropbtn{
+    display: none;
+}
+.dropdown{
+    margin-top: 10px;
+}
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #222;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 3px solid white;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #222;
+      border: 3px solid white;
+       color:white;
+    }
+  .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+  @media screen and (max-width:1100px){
+    .lista{
+        display: none;
+    }
+    .dropbtn, .dropdown{
+        display: inherit;
+        float: right;
+    }
+}
+
+/*  ############### CONTENIDO HOME #############  */
+.content{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+}
+.content img{
+    display: inline;
+    margin:0 auto 40px auto;
+}
+.home{
+    position:fixed;
+    bottom: 50px;
+    left: -80px;
+    padding: 10px 30px;
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ;
+}
+.home:hover{
+    left:0;
+}
+.activo{
+    background-color: #fff;
+    color: #222;
+}
+
+
+/* ##################### barra de scroll ####################*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }

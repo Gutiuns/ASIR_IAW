@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+}
+header{
+    background-color: #4267B2;
+    color:white;
+    height: 11vh;
+}
+header table{
+    width: 100%;
+    border-collapse: collapse;
+}
+header td{
+    width: 50%;
+}
+header h1{
+    margin-left: 20px;
+    font-weight: 700;
+}
+.datos{
+    display: inline;
+}
+.block{
+    display: block;
+    margin-top: 3px;
+}
+header td a,header td label {
+    color:rgb(148, 161, 197);
+    text-decoration: none;
+    font-size: .9em;
+    cursor: pointer;
+}
+header p{
+    font-size: 0.9em;
+}
+.treinta{
+    width:33%;
+    padding: 5px 15px 5px 15px;
+    
+}
+input[type=submit]{
+    background: rgb(52, 112, 168);
+    cursor: pointer;
+    padding: 3px 8px;
+    border:none;
+    border-top:2px solid rgb(66, 126, 182);
+    color:white;
+    outline: 1px solid rgb(54, 72, 133);
+}

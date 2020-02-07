@@ -1,0 +1,202 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<title> Segunda p&aacute;gina de prueba del Cap&iacute;tulo 2 </title>
+	<meta charset="UTF-8" />
+	<!-- Ruta absoluta, icono dinámico -->
+	<link rel="shortcut icon" type="image/x-icon" href="http://rutgalera.esy.es/imagenes/EarthIcon.ico" />
+
+	<!-- Código Javascript para prohibir el botón derecho del ratón -->
+	<script type="text/javascript">
+    //<![CDATA[
+
+    <!-- Begin
+    document.oncontextmenu = function(){return false}
+    // End -->
+    //]]>
+    </script>
+</head>
+
+
+<body style="background-color: rgb(253, 229, 121); font-family: Verdana, Geneva, Tahoma, sans-serif;">
+	<h1> FORMULARIOS </h1>
+		<h3>Input con type = text</h3>
+		<p> Atributos:
+		<ul>
+			<li> name: el contenido de este campo son <u>los datos que se envían al servidor</u><br />
+				<a href="#ej1">Ejemplo 1</a></li>
+			<li> value: valor por defecto<br /><a href="#ej2">Ejemplo 2</a></li>
+			<li> size: establece el tamaño del campo de texto.<br /><a href="#ej3">Ejemplo 3</a> </li>
+			<li> maxlength: establece el número máximo de caracteres que se pueden introducir.<br /><a href="#ej4">Ejemplo 4</a> </li>
+			<li> disabled: este campo no podrá modificarse </li>
+		</ul>
+		<h4 id="ej1"> Ejemplo 1 </h4>
+ 		<form action="manejador.html" method="post">
+		  Escribe tu nombre:
+		  <input type="text" name="nombre0" value="" />
+		</form>
+		
+		<h4 id="ej2"> Ejemplo 2 </h4>
+ 		<form action="manejador.html" method="post">
+		  Escribe tu nombre:
+		  <input type="text" name="nombre1" value="Valor por defecto" />
+		</form>
+		
+		<h4 id="ej3"> Ejemplo 3 </h4>
+ 		<form action="manejador.html" method="post">
+		  Escribe tu nombre:
+		  <input type="text" name="nombre2" value="Valor por defecto" size="100"/>
+		</form>
+
+		<h4 id="ej4"> Ejemplo 4 </h4>
+ 		<form action="manejador.html" method="post">
+		  Escribe tu nombre:
+		  <input type="text" name="nombre3" value="Max. caracteres: 5" size="100" maxlength="5"/>
+		</form>
+		
+		<h4 id="ej5"> Ejemplo 5 </h4>
+ 		<form action="manejador.html" method="post">
+		  Escribe tu nombre:
+		  <input type="text" name="nombre4" value="No se puede cambiar" size="100" disabled />
+		<br/><input type="range" name="colo" min="10" max="100"/>
+		<br/><input type="color" name="colores"/>
+		</form>
+
+		<h3>CONTRASEÑAS</h3>
+		<form action="manejador.html" method="post">
+		  Contraseña:
+		  <input type="password" name="contrasenia"  size="8" maxlength="8" />
+		</form>
+		
+		<h3>CHECKBOX</h3>
+		<form action="manejador.html" method="post">
+			<input type="checkbox" name="puesto_directivo"  value="direccion"/> Dirección <br />
+			<input type="checkbox" name="puesto_tecnico"  value="tecnico"/> Técnico <br />
+			<input type="checkbox" name="puesto_empleado"  value="empleado" checked="checked" /> Empleado <br />
+		</form>
+		
+		<div align="center">
+			<h3>RADIO BUTTON </h3>
+			<form action="manejador.html" method="post">
+				Estaciones <br />
+				<input type="radio" name="est" value="verano" checked="cheked" /> Verano <br />
+				<input type="radio" name="est" value="otoño" /> Otoño <br />
+				<input type="radio" name="est" value="primavera" /> Primavera <br />
+				<input type="radio" name="est" value="invierno" /> Invierno <br />
+			</form>
+		</div>
+		
+		
+		<h3> FICHERO + BOTONES </h3>
+ 		<form action="manejador.html" method="post" enctype="multipart-formdata" >
+			Fichero :<input type="file" name="fichero" /> <br />
+			<input type="submit" name="buscar" value="a que no sabes qué hace" />
+			<input type="reset" name="limpiar" value="Limpiar" />
+			<input type="button" name="enviar" value="Abrir" onclick="window.open()" />
+		</form>
+		
+		<h2><a target="_blank" href="http://www.w3schools.com/html/html_form_input_types.asp">Ver nuevos tipos en html5</a></h2>
+		<form action="manejador.html" method="post" >
+			Tipo Numero: <input type="number" min="1" max="5" /> <br /><br />
+			Tipo Fecha:  <input type="date" name="cumple"> (Tambien tiene min y max)<br /><br />
+			Tipo Color:  <input type="color" name="favcolor"><br /><br />
+			Tipo Rango:  <input type="range" name="points" min="0" max="10"><br /><br />
+			Tipo Fecha y Hora:  <input type="datetime" name="bdaytime"><br /><br />
+			E-mail:  <input type="email" name="email"><br /><br />
+			Search Google: <input type="search" name="googlesearch"><br /><br />
+		</form>
+
+		<h3> FIELDSET y LEGEND con LABEL FOR</h3>
+ 		<form action="manejador.html" method="post">
+			<fieldset>
+				<legend>Datos personales</legend>
+				<label for="nombre1">Nombre</label> 
+				<br /><input type="text" id="nombre1" name="nombre" value="" /><br/>
+				<label for="ape">Apellidos</label> 
+				<br/><input type="text" id="ape" name="apellidos" value="" /><br/>
+				<label for="dni1">DNI</label> 
+				<br/><input type="text" id="dni1" name="dni" size="10" maxlength="9" /><br /><br />
+				<input type="submit" name="buscar" value="Enviar" />
+				<input type="reset" name="limpiar" value="Limpiar" />
+			</fieldset>
+		</form>
+		
+		<h3> TEXTAREA y LISTAS DESPLEGABLES</h3>
+ 		<form action="manejador.html" method="post">
+			<fieldset>
+				<legend> TEXTAREA </legend>
+				<label for="descripcion">Descripción del producto</label> <br/>
+				<textarea id="descripcion" name="descripcion" cols="40" rows="5"></textarea><br /><br />		
+			</fieldset>
+			<fieldset>
+				<legend> Lista desplegable tipo 1 </legend>
+				Sólo se ve un valor y deja elegir un único valor<br /><br />
+				<label for="so">Sistema operativo</label> <br/>
+					<select id="so" name="so">
+					  <option value="" selected="selected">- selecciona -</option>
+					  <option value="windows">Windows</option>
+					  <option value="mac">Mac</option>
+					  <option value="linux">Linux</option>
+					  <option value="otro">Otro</option>
+					</select>	
+			</fieldset>
+			<fieldset>
+				<legend> Lista desplegable tipo 2 </legend>
+				Se ven todos los valores pero deja elegir un único valor<br /><br />
+				<label for="so2">Sistema operativo</label> <br/>
+					<select id="so2" name="so2" size="4">
+					  <option value="windows" selected="selected">Windows</option>
+					  <option value="mac">Mac</option>
+					  <option value="linux">Linux</option>
+					  <option value="linux">SO6</option>
+					  <option value="linux">SO7</option>
+					  <option value="linux">SO8</option>
+					  <option value="linux">SO9</option>
+					  <option value="otro">Otro</option>
+					</select>	
+			</fieldset>
+			<fieldset>
+				<legend> Lista desplegable tipo 3 </legend>
+				Se ven todos los valores y deja elegir varios valores<br /><br />
+				<label for="so3">Sistema operativo</label> <br/>
+					<select id="so3" name="so3" size="5" multiple="multiple">
+					  <option value="windows" selected="selected">Windows</option>
+					  <option value="mac">Mac</option>
+					  <option value="linux">Linux</option>
+					  <option value="otro">Otro</option>
+					</select>		
+			</fieldset>
+			<fieldset>
+				<legend>Agrupamiento de opciones (OPTGROUP)</legend>
+				<label for="prog">Programa seleccionado</label> <br/>
+				<select id="prog" name="programa" >
+				  <optgroup label="Sistemas Operativos">
+					<option value="Windows" selected="selected">Windows</option>
+					<option value="Mac">Mac</option>
+					<option value="Linux">Linux</option>
+					<option value="Other">Otro</option>
+				  </optgroup>
+				  <optgroup label="Navegadores">
+					<option value="Internet Explorer" selected="selected">Internet Explorer</option>
+					<option value="Firefox">Firefox</option>
+					<option value="Safari">Safari</option>
+					<option value="Opera">Opera</option>
+					<option value="Other">Otro</option>
+				  </optgroup>
+				</select>
+			</fieldset>
+		</form>
+		<hr />
+		<br /><br /><br />
+		<h2><a href="http://www.w3schools.com/html/html_layout.asp" target="_blank">Ir a Layouts</a></h2>
+		<br /><br /><br />
+		<hr />
+		<br /><br /><br />
+		<h2><a href="form2.html"  target="_blank">Ir a Ejemplos de Formularios</a></h2>
+		<br /><br /><br />
+		<hr />
+		
+</body>
+
+</html>
