@@ -354,10 +354,10 @@ header{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: #222; 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
+    background: #111; 
   }
