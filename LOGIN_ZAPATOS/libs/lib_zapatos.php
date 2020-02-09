@@ -50,7 +50,7 @@ function pass_bien ($pas1,$pas2){
     return($igual);
 }
 
-function header_($usuario,$ruta){
+function ponHeader($usuario,$ruta){
     echo '<header>
     <img src="resources/ashi_white.png" height="70px" class="headimg"/>                    
          <ul class="fixlist">
@@ -86,7 +86,7 @@ function header_($usuario,$ruta){
                 }
         echo '</ul>
         <div class="dropdown">
-            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <button class="dropbtn"><i class="fas fa-bars fa-2x"></i></button>
                 <div class="dropdown-content">
                     <a href="#"><i class="fas fa-home"></i>  Inicio</a>
                     <a href="#"><i class="fas fa-shopping-cart"></i>  Catálogo</a>
