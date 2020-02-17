@@ -1,4 +1,5 @@
 <?php
+
 function existe_user ($bd,$user,$pass){
     $existe=false;
     $sql= "select * from usuarios";
@@ -39,6 +40,7 @@ function existe_nombre ($bd,$usu){
         }
     }
     return ($libre);
+    $sentencia->closeCursor();
 }
 
 function pass_bien ($pas1,$pas2){
@@ -54,52 +56,67 @@ function ponHeader($usuario,$ruta){
     echo '<header>
     <img src="resources/ashi_white.png" height="70px" class="headimg"/>                    
          <ul class="fixlist">
-            <li class="fixit" ><a href="#" class="lista ';
+            <li class="fixit" ><a href="inicio.php" class="lista ';
             if ($ruta=="inicio.php"){
                 echo "activo";
             } 
             echo '"><i class="fas fa-home"></i>  Inicio</a></li>
-            <li class="fixit "><a href="#" class="lista ';
+            <li class="fixit "><a href="catalogo.php" class="lista ';
             if ($ruta=="catalogo.php"){
                 echo "activo";
             } 
             echo '"><i class="fas fa-shopping-cart"></i>  Catálogo</a></li>
-            <li class="fixit "><a href="#" class="lista ';
+            <li class="fixit "><a href="carro.php" class="lista ';
             if ($ruta=="carro.php"){
                 echo "activo";
             } 
             echo '"><i class="fas fa-shopping-basket"></i>  Carrito</a></li>
-            <li class="fixit "><a href="#" class="lista ';
+            <li class="fixit "><a href="perfil.php" class="lista ';
             if ($ruta=="perfil.php"){
                 echo "activo";
             } 
             echo '"><i class="fas fa-user-circle"></i>  Perfil</a></li>' ;
                 if ($_SESSION['user']=='gutiuns'){
-                    echo '<li class="fixit "><a href="#" class="lista ';
+                    echo '<li class="fixit "><a href="admin.php" class="lista ';
                     if ($ruta=="admin.php"){
                         echo "activo";
                     } 
                     echo '"><i class="fas fa-hammer"></i>  Administrar</a></li>';
                 }
-                if(!$_SESSION['user']){
-                    header('location:index.php');
-                }
+
         echo '</ul>
         <div class="dropdown">
             <button class="dropbtn"><i class="fas fa-bars fa-2x"></i></button>
                 <div class="dropdown-content">
-                    <a href="#"><i class="fas fa-home"></i>  Inicio</a>
-                    <a href="#"><i class="fas fa-shopping-cart"></i>  Catálogo</a>
-                    <a href="#"><i class="fas fa-shopping-basket"></i>  Carrito</a>
-                    <a href="#"><i class="fas fa-user-circle"></i>  Perfil</a>';
+                    <a href="inicio.php"><i class="fas fa-home"></i>  Inicio</a>
+                    <a href="catalogo.php"><i class="fas fa-shopping-cart"></i>  Catálogo</a>
+                    <a href="carro.php"><i class="fas fa-shopping-basket"></i>  Carrito</a>
+                    <a href="perfil.php"><i class="fas fa-user-circle"></i>  Perfil</a>';
                         if ($_SESSION['user']=='gutiuns'){
-                            echo '<a href="#"><i class="fas fa-hammer"></i>  Administrar</a>';
+                            echo '<a href="admin.php"><i class="fas fa-hammer"></i>  Administrar</a>';
                         }
                         echo'
                 </div>
         </div>
-</header>';
+    </header>';
+    
 }
-
-
+function compruebaLog(){
+    if(!$_SESSION['user']){
+    header('location:index.php');
+    }
+}
+function sacaZapas($bd){
+    $sql= "select * from zapatillas";
+    $sentencia=$bd->prepare($sql);
+    $sentencia->execute();
+    while($fila=$sentencia->fetch() ){
+      echo '<tr class="zapatilla">
+                <td><img class="imgzapa" src="resources/zapas/' .$fila['foto'] .'.jpg"/></td>
+                <td><h2 class="nomzapa">' .$fila['foto'] .'</h2><p class="precio">' .$fila['precio'] .'$</p></td>
+                <td><input type="checkbox" value="' .$fila['id'] .'" name="checkbox[]" id="' .$fila['nombre'] .'" class="chkz"></td>
+                <td><label for="' .$fila['nombre'] .'">comprar</label></td>
+            </tr>';
+    }
+}
 ?>

@@ -23,7 +23,7 @@ session_start();
                             ponHeader( $_SESSION["user"],$ruta);
                             ?>
                             <div class="content">
-                                <img src="resources/nike.jpg" width="90%" class="anuncio"/>
+                               
                             </div>
                             <a href="inicio.php"  class="home">Volver</a>
         <footer>
@@ -31,4 +31,3 @@ session_start();
         </footer>
     </body>
 </html>
-<?php compruebaLog() ?>

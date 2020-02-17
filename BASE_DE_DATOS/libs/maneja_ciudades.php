@@ -10,7 +10,7 @@ function inserta_ciudad(&$bd,$identity,$nom){
         $e=$sentencia->errorInfo();
         print_r($e);
     }
-
+    $sentencia->closeCursor();
 }
 function borra_ciudad(&$bd,$nom){
     try{   
@@ -22,7 +22,7 @@ function borra_ciudad(&$bd,$nom){
        $e=$sentencia->errorInfo();
        print_r($e);
    }
-
+   $sentencia->closeCursor();
 }
 function actualiza_ciudad(&$bd,$ident,$nom){  
 $sql= "update ciudades set nombre=:nombre where idCiudad=:id";
@@ -30,6 +30,7 @@ $sql= "update ciudades set nombre=:nombre where idCiudad=:id";
    $sentencia->bindValue("nombre", $nom);
    $sentencia->bindValue("id", $ident);
    $sentencia->execute();
+   $sentencia->closeCursor();
 }
 function imprime_ciudades(&$bd){  
     $sql= "select * from ciudades";

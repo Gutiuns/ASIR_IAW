@@ -13,7 +13,7 @@ session_start();
     <link href="resources/fontawesome-free-5.12.0-web/css/fontawesome.css" rel="stylesheet">
     <link href="resources/fontawesome-free-5.12.0-web/css/brands.css" rel="stylesheet">
     <link href="resources/fontawesome-free-5.12.0-web/css/solid.css" rel="stylesheet">
-    <link rel="stylesheet" href="Style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     
     <title>Ashi Shoes - Home</title>
 </head>
@@ -23,7 +23,15 @@ session_start();
                             ponHeader( $_SESSION["user"],$ruta);
                             ?>
                             <div class="content">
-                                <img src="resources/nike.jpg" width="90%" class="anuncio"/>
+                                <form class="catalog" action="#" method="POST">
+                                    <table class="tablaa">
+                                        <?php 
+                                        conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
+                                        sacaZapas($bd);
+                                        cierra_bd($bd); 
+                                        ?>
+                                    </table>
+                                </form>
                             </div>
                             <a href="inicio.php"  class="home">Volver</a>
         <footer>
