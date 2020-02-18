@@ -20,7 +20,7 @@ session_start();
     <body>                
                             <?php  
                             $ruta=basename(__FILE__);                        
-                            ponHeader( $_SESSION["user"],$ruta);
+                            ponHeader($ruta);
                             ?>
                             <div class="content">
                                 <img src="resources/nike.jpg" width="90%" class="anuncio"/>

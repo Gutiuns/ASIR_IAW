@@ -1,0 +1,9 @@
+<?php 
+require_once('libs/dat_bd.php');
+require_once('libs/lib_bd.php');
+require_once('libs/lib_zapatos.php');
+conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
+session_start();
+session_destroy();
+unset($_SESSION);
+?>

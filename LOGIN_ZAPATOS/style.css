@@ -66,8 +66,8 @@ i {
     border: none;
     margin-left: 10px;
     overflow: hidden;
-    width: 90%;
     font-size: 1.2em;
+    margin-left: 5px;
 }
 
 input:focus {
@@ -113,16 +113,15 @@ input:focus {
     display: block;
     position: fixed;
     width: 300px;
-    top:0;
-    left: 50%;
+    top:0px;
+    left:50%;
     transform:translate(-50%,0);
-    margin-left: auto;
-    margin-right: auto;
     padding: 5px;
     background-color: red;
     color: rgb(255, 255, 255);
     text-align: center;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.315);
+    
 }
 .logeate{
     text-align: center;
@@ -366,18 +365,19 @@ header{
     border:3px solid #222;
     padding: 20px 40px;
     margin: 20px;
+    width: 100%;
+    text-align: center;
 }
 .imgzapa{
-    float:left;
     width: 160px;
     margin:10px;
 }
 .nomzapa{
-    float: left;
+    display: block;
 
 }
 .catalog{
-    width: 900px;
+   width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -392,7 +392,7 @@ label{
     border: 3px solid #222;
     cursor: pointer;
 }
-label:checked{
+label:active{
     background-color:#222;
     font-weight: 800;
     color:#fff;
@@ -402,4 +402,31 @@ label:checked{
 }
 .tablaa{
     margin: auto;
+}
+.datazap{
+    width: 20%;
+}
+.precio{
+    display: block;
+}
+.labeled{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bclose{
+    text-decoration: none;
+    font-weight: 800;
+    color: red;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 3px solid red;
+}
+.bclose:hover{
+    border: 3px solid red;
+    color: #fff;
+    background-color: red;
+}
+.bclose:active{
+    padding: 7px 20px;
+    margin:3px 0 0 10px;
 }

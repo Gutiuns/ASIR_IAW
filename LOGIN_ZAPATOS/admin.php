@@ -20,7 +20,7 @@ session_start();
     <body>                
                             <?php  
                             $ruta=basename(__FILE__);                        
-                            ponHeader( $_SESSION["user"],$ruta);
+                            ponHeader($ruta);
                             ?>
                             <div class="content">
                               
@@ -31,3 +31,4 @@ session_start();
         </footer>
     </body>
 </html>
+<?php compruebaLog(); ?>

@@ -52,10 +52,10 @@ function pass_bien ($pas1,$pas2){
     return($igual);
 }
 
-function ponHeader($usuario,$ruta){
+function ponHeader($ruta){
     echo '<header>
-    <img src="resources/ashi_white.png" height="70px" class="headimg"/>                    
-         <ul class="fixlist">
+            <img src="resources/ashi_white.png" height="70px" class="headimg"/>                    
+            <ul class="fixlist">
             <li class="fixit" ><a href="inicio.php" class="lista ';
             if ($ruta=="inicio.php"){
                 echo "activo";
@@ -101,21 +101,26 @@ function ponHeader($usuario,$ruta){
     </header>';
     
 }
+
 function compruebaLog(){
     if(!$_SESSION['user']){
-    header('location:index.php');
+        session_destroy();
+        unset($_SESSION);
+        header('location:index.php');
     }
 }
+
 function sacaZapas($bd){
     $sql= "select * from zapatillas";
     $sentencia=$bd->prepare($sql);
     $sentencia->execute();
     while($fila=$sentencia->fetch() ){
       echo '<tr class="zapatilla">
-                <td><img class="imgzapa" src="resources/zapas/' .$fila['foto'] .'.jpg"/></td>
-                <td><h2 class="nomzapa">' .$fila['foto'] .'</h2><p class="precio">' .$fila['precio'] .'$</p></td>
-                <td><input type="checkbox" value="' .$fila['id'] .'" name="checkbox[]" id="' .$fila['nombre'] .'" class="chkz"></td>
-                <td><label for="' .$fila['nombre'] .'">comprar</label></td>
+                <td class="datazap"><img class="imgzapa" src="resources/zapas/' .$fila['foto'] .'.jpg"/></td>
+                <td class="datazap"><h2 class="nomzapa">' .$fila['nombre'] .'</h2></td>
+                <td class="datazap"><p class="precio">' .$fila['precio'] .'$</p></td>
+                <td class="datazap"><input type="checkbox" value="' .$fila['id'] .'" name="checkbox[]" id="' .$fila['nombre'] .'" class="chkz"></td>
+                <td class="datazap"><label for="' .$fila['nombre'] .'" class="labeled" >Añadir al carrito</label></td>
             </tr>';
     }
 }

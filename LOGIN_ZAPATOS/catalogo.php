@@ -19,8 +19,8 @@ session_start();
 </head>
     <body>                
                             <?php  
-                            $ruta=basename(__FILE__);                        
-                            ponHeader( $_SESSION["user"],$ruta);
+                            $ruta=basename(__FILE__);                      
+                            ponHeader($ruta);
                             ?>
                             <div class="content">
                                 <form class="catalog" action="#" method="POST">
