@@ -115,20 +115,28 @@ function sacaZapas($bd){
     $sentencia=$bd->prepare($sql);
     $sentencia->execute();
     while($fila=$sentencia->fetch() ){
-      echo '<tr class="zapatilla">
-                <td class="datazap"><img class="imgzapa" src="resources/zapas/' .$fila['foto'] .'.jpg"/></td>
-                <td class="datazap"><h2 class="nomzapa">' .$fila['nombre'] .'</h2></td>
-                <td class="datazap"><p class="precio">' .$fila['precio'] .'$</p></td>
-                <td class="datazap"><input type="checkbox" value="' .$fila['id'] .'" name="zapatillas[' .$fila['nombre'] .']["id"]" id="' .$fila['nombre'] .'" class="chkz"></td>
-                <td class="datazap">
-                    <select name="zapatillas[' .$fila['nombre'] .']["numero"]" class="numzapa">
-                        <option value="opcion1">opcion1</option>
-                        <option value="opcion2">opcion2</option>
-                        <option value="opcion3">opcion3</option>
-                    </select>
-                </td>
-                <td class="datazap"><label for="' .$fila['nombre'] .'" class="labeled" >Añadir al carrito</label></td>
-            </tr>';
+      echo '
+            <div class="bloquezapa">
+                <p  class="pzapa">'.$fila['nombre'].'</p>
+                <img src="resources/zapas/'.$fila['foto'] .'.jpg" width="150px" heigh="150px"/>
+                <p class="pzapa">'.$fila['precio'].'€</p>
+                <button type="submit" class="botonzapa" value="'.$fila['id'].'" name="show">elegir</button>        
+            </div>';
+    }
+}
+function sacaZapatilla($bd,$id){
+    $sql= "select * from zapatillas where id=:ide";
+    $sentencia=$bd->prepare($sql);
+    $sentencia->bindvalue("ide",$id);
+    $sentencia->execute();
+    while($fila=$sentencia->fetch() ){
+      echo '
+            <div class="bloquezapa">
+                <p  class="pzapa">'.$fila['nombre'].'</p>
+                <img src="resources/zapas/'.$fila['foto'] .'.jpg" width="150px" heigh="150px"/>
+                <p class="pzapa">'.$fila['precio'].'€</p>
+                <button type="submit" class="botonzapa" value="'.$fila['id'].'" name="show">elegir</button>        
+            </div>';
     }
 }
 

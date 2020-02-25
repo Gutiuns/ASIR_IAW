@@ -368,50 +368,10 @@ header{
     width: 100%;
     text-align: center;
 }
-.imgzapa{
-    width: 160px;
-    margin:10px;
-}
-.nomzapa{
-    display: block;
-
-}
 .catalog{
    width: 1000px;
     margin-left: auto;
     margin-right: auto;
-}
-.chkz{
-    margin: 20px;
-    font-size: larger;
-}
-label{
-    background-color: transparent;
-    font-weight: 800;
-    padding: 10px 30px;
-    border: 3px solid #222;
-    cursor: pointer;
-}
-label:active{
-    background-color:#222;
-    font-weight: 800;
-    color:#fff;
-    padding: 10px 30px;
-    border: 3px solid #222;
-    cursor: pointer;
-}
-.tablaa{
-    margin: auto;
-}
-.datazap{
-    width: 20%;
-}
-.precio{
-    display: block;
-}
-.labeled{
-    display: flex;
-    flex-wrap: nowrap;
 }
 .bclose{
     text-decoration: none;
@@ -429,4 +389,31 @@ label:active{
 .bclose:active{
     padding: 7px 20px;
     margin:3px 0 0 10px;
+}
+.bloquezapa{
+    width: 25%;
+    min-width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    float: left;
+    margin: 20px;
+    border: 3px solid #222;
+}
+.botonzapa{
+    background:#fff;
+    color: #222;
+    padding: 10px 30px;
+    border: 3px solid #222;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.botonzapa:hover{
+    background:#222;
+    color: #fff;
+}
+.pzapa{
+    font-size: 1.3em;
+    font-weight: 600;
 }

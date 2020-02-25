@@ -19,14 +19,14 @@ session_start();
 </head>
     <body>                
                             <?php  
-                            $ruta=basename(__FILE__);                      
+                            $ruta="catalogo.php";                      
                             ponHeader($ruta);
                             ?>
                             <div class="content">
                                 <form class="catalog" action="muestrazapa.php" method="POST">
                                         <?php 
                                         conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
-                                        sacaZapas($bd);
+                                        sacaZapatilla($bd,$_POST['show']);
                                         cierra_bd($bd); 
                                         ?>
                                 </form>

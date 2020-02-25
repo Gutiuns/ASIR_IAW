@@ -7,15 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="catalog" action="muestra.php" method="POST">
-        <table class="tablaa">
-           <label for="zapa1">zapatilla1</label><input type="checkbox" value="" name="zapa1['nombre']" id="zapa1">
-            <select name="">
-                <option value="opcion1">opcion1</option>
-                <option value="opcion2">opcion2</option>
-                <option value="opcion3">opcion3</option>
-            </select>
-        </table>
+    <form class="catalog" action="muestra.php" method="POST">       
+           <div><table>
+               <tr>
+                <td>
+                    <p>zapatilla1</p>
+                    <div style="width: 100px;height: 100px;background-color: blue;"></div>
+                   </td>
+                   <td>
+                    <p>precio</p>
+                   </td>
+                   <td>
+                       <button type="submit" value="zapa1" name="selected">elegir</button>
+                   </td>
+               </tr>  
+               <tr>
+                <td>
+                    <p>zapatilla2</p>
+                    <div style="width: 100px;height: 100px;background-color: blue;"></div>
+                   </td>
+                   <td>
+                    <p>precio</p>
+                   </td>
+                   <td>
+                       <button type="submit" value="zapa2" name="selected">elegir</button>
+                   </td>
+               </tr>         
+          </div>
     </form>
 </body>
 </html>
