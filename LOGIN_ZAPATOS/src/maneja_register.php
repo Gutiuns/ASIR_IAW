@@ -4,18 +4,20 @@ require_once('../libs/dat_bd.php');
 require_once('../libs/lib_bd.php');
 require_once('../libs/lib_zapatos.php');
 conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
-$existe=existe_nombre($bd,$_POST['user']);
-if($existe){
-    if(pass_bien($_POST['pass1'],$_POST['pass2'])){    
-        inserta_usuario($bd,$_POST['user'],$_POST['pass1'],$_POST['nombre'],$_POST['ape'],$_POST['nacimiento']); 
+$noexiste=existe_nombre($bd,$_POST['user']);
+if($noexiste){
+    if(pass_bien($_POST['pass1'],$_POST['pass2'])){ 
+        $id=id_libre($bd);   
+        inserta_usuario($bd, $id, $_POST['user'],$_POST['pass1'],$_POST['nombre'],$_POST['ape'],$_POST['nacimiento']); 
         $_SESSION['user']=$_POST['user'];
         header('location:../reg_bien.php');
     }else{
         $_SESSION['paserror']=true;
-    header('location:../register.php');
+        header('location:../register.php');
     }    
 }else{
     $_SESSION['regerror']=true;
     header('location:../register.php');
 }
+cierra_bd($bd);
 ?>

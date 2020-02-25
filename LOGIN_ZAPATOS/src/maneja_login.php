@@ -5,6 +5,7 @@ require_once('../libs/lib_bd.php');
 require_once('../libs/lib_zapatos.php');
 conecta_bd($bd,$servidor,$baseDatos,$usuario,$clave);
 $existe=existe_user($bd,$_POST['user'],$_POST['pass']);
+cierra_bd($bd);
 if($existe){
     $_SESSION['user']=$_POST['user'];
     $_SESSION['pass']=$_POST['pass'];

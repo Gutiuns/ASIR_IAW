@@ -119,9 +119,30 @@ function sacaZapas($bd){
                 <td class="datazap"><img class="imgzapa" src="resources/zapas/' .$fila['foto'] .'.jpg"/></td>
                 <td class="datazap"><h2 class="nomzapa">' .$fila['nombre'] .'</h2></td>
                 <td class="datazap"><p class="precio">' .$fila['precio'] .'$</p></td>
-                <td class="datazap"><input type="checkbox" value="' .$fila['id'] .'" name="checkbox[]" id="' .$fila['nombre'] .'" class="chkz"></td>
+                <td class="datazap"><input type="checkbox" value="' .$fila['id'] .'" name="zapatillas[' .$fila['nombre'] .']["id"]" id="' .$fila['nombre'] .'" class="chkz"></td>
+                <td class="datazap">
+                    <select name="zapatillas[' .$fila['nombre'] .']["numero"]" class="numzapa">
+                        <option value="opcion1">opcion1</option>
+                        <option value="opcion2">opcion2</option>
+                        <option value="opcion3">opcion3</option>
+                    </select>
+                </td>
                 <td class="datazap"><label for="' .$fila['nombre'] .'" class="labeled" >Añadir al carrito</label></td>
             </tr>';
     }
+}
+
+function id_libre($bd){  
+    $id=1;
+    $sql= "select * from zapatillas";
+        $sentencia=$bd->prepare($sql);
+        $sentencia->execute();
+        while($fila=$sentencia->fetch() ){
+        if ($id==$fila['id']){
+            $id++;
+        }
+    }
+    $sentencia->closeCursor();
+    return($id);
 }
 ?>
